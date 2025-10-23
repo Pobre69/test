@@ -1,0 +1,9 @@
+.Text_1-6em{
+    font-size: clamp(14px, 1.6em, 36px);
+}
+.Text_1-5em{
+    font-size: clamp(14px, 1.5em, 35px);
+}
+.Text_0-6em{
+    font-size: clamp(10px, 0.6em, 14px);
+}

@@ -1,0 +1,48 @@
+body {
+    font-family: sans-serif;
+}
+
+#NoContentMessageBox{
+    text-align: center;
+    margin-top: calc(50vh - 50px - 15vh - (70px / 2));
+    margin-bottom: calc(50vh - 50px - 15vh - (70px / 2));
+    height: 70px;
+    font-size: 1.2rem;
+    color: var(--Color3);
+}
+
+.main-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+.titulo {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.citacoes-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    min-height: (100vh - 50px - 15vh);
+}
+
+.layout-artigo {
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.texto-comentario {
+    font-size: 1.1rem;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.texto-nome,
+.texto-profissao {
+    margin: 0;
+    font-weight: bold;
+}

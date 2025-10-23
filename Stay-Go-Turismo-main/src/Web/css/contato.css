@@ -1,0 +1,113 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1000px;
+    margin: auto;
+    margin-top: calc(50vh - 50px - 15vh - (250px / 2));
+    margin-bottom: calc(50vh - 50px - 15vh - (250px / 2));
+}
+
+.box {
+    flex: 1 1 400px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 500px;
+    background-color: var(--BoxBackground);
+}
+
+.box h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 22px;
+    color: var(--Color2);
+}
+
+.contatos {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 100%;
+}
+
+.contatos a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 17px;
+    text-decoration: none;
+    margin-bottom: 18px;
+    transition: color 0.3s ease, transform 0.2s ease;
+    color: var(--Color1);
+}
+
+.contatos a img {
+    width: 24px;
+    height: 24px;
+}
+
+.contatos a:hover {
+    transform: translateX(5px);
+    color: var(--Color2);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+form label {
+    margin-top: 15px;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+form input,
+form textarea {
+    margin-top: 6px;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: none;
+    border: var(--BorderColor1);
+}
+form input:focus,
+form textarea:focus,
+form button {
+    border-color: var(--Color2);
+}
+form button:hover{
+    background-color: var(--Color3);
+}
+
+
+form button {
+    margin-top: 25px;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .box {
+        min-height: auto;
+    }
+}

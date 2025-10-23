@@ -1,0 +1,111 @@
+*{
+    --menu-bg: #f7f7fa;
+    --menu-link-bg: rgba(255,255,255,0.7);
+    --menu-link-hover-bg: #e0e7ff;
+    --menu-link-hover-color: #4e54c8;
+    --Color1: #333;
+    --Color2: #1e90ff;
+    --Color3: #187bcd;
+    --BoxBackground: #fff;
+    --BorderColor1: 1px solid #ccc;
+}
+body {
+    background-color: rgba(240, 242, 245, 1);
+}
+
+
+
+.BColor1{
+    background-color: rgba(--BoxBackground);
+}
+.BColor2{
+    background-color: var(--menu-bg, gainsboro);
+}
+.BColor3{
+    background: linear-gradient(to right, #4e54c8, #8f94fb);
+}
+.BColor4 {
+    background-color: #f8f8f8;
+}
+.BColor5 {
+    background: white;
+}
+
+.Color1{
+    color: black;
+}
+.Color2{
+    color: #1e90ff;
+}
+.Color3 {
+    color: #333;
+}
+.Color3.texto-nome {
+    color: #444;
+}
+.Color3.texto-profissao {
+    color: #666;
+}
+.Color4 {
+    color: white;
+}
+.Color6 {
+    color: #666;
+}
+.Color7 {
+    color: #555;
+}
+
+
+.BorderColor1{
+    border: 1px solid #ccc;
+}
+.BorderColor2 {
+    border-top: 2px solid #f0f0f0;
+}
+
+.zoom-ativo {
+    transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
+    transform: scale(1.12);
+    z-index: 10;
+    box-shadow: 0 0 20px 4px #8f94fb99;
+}
+
+
+
+
+.box {
+    border-radius: 10px;
+    background-color: var(--BoxBackground);
+}
+
+.box h2 {
+    color: var(--Color2);
+}
+
+.contatos a {
+    color: var(--Color1);
+}
+
+.contatos a:hover {
+    color: var(--Color2);
+}
+
+form input:focus,
+form textarea:focus {
+    border: var(--BorderColor1);
+}
+
+form input:focus,
+form textarea:focus,
+form button {
+    border-color: var(--Color2);
+}
+
+form button:hover {
+    background-color: var(--Color3);
+}
+
+form button {
+    border: none;
+}

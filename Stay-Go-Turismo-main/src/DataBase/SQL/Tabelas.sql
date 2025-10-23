@@ -1,0 +1,81 @@
+CREATE DATABASE IF NOT EXISTS stayGoTurismo;
+USE stayGoTurismo;
+
+FLUSH PRIVILEGES;
+
+CREATE TABLE IF NOT EXISTS Ponto_Turistico(
+    idPonto INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(75) NOT NULL UNIQUE,
+    complemento varchar(200),
+    
+    -- Localização
+    estado VARCHAR(30) NOT NULL,
+    cidade VARCHAR(50) NOT NULL,
+    bairro VARCHAR(30),
+    CEP INT,
+    endereco VARCHAR(100) NOT NULL,
+    
+    -- Horário de Abertura Feriados e Fim de Semana
+    horarioAbertura TIME NOT NULL,
+    horarioAberturaF TIME,
+    
+    -- Horário de Fechamento Feriados e Fim de Semana
+    horarioFechamento TIME NOT NULL,
+    horarioFechamentoF TIME,
+    
+    -- Contato
+    contato VARCHAR(20),
+    site VARCHAR(100),
+    email VARCHAR(50),
+    
+    -- Complemento
+    precoEntrada DECIMAL(5,2),
+    estacionamento BOOLEAN NOT NULL,
+    estruturasServicao VARCHAR(100),
+    avaliacaoGeral DECIMAL(2,1) NOT NULL,
+    pacote VARCHAR(50)
+);
+CREATE TABLE IF NOT EXISTS Ponto_View(
+    idPonto INT NOT NULL PRIMARY KEY,
+    TotalVisitantes INT NOT NULL,
+    FOREIGN KEY (idPonto) REFERENCES Ponto_Turistico(idPonto)
+        ON UPDATE CASCADE
+        ON DELETE CASCADE
+) ENGINE=INNODB;
+CREATE TABLE IF NOT EXISTS Tema(
+	idTema INT AUTO_INCREMENT PRIMARY KEY,
+    Tema VARCHAR(60) NOT NULL
+)ENGINE=INNODB;
+CREATE TABLE IF NOT EXISTS Ponto_Tema(
+    idTema INT NOT NULL,
+    idPonto INT NOT NULL,
+    Ponto_Turistico_Natural TINYINT(1) NOT NULL,
+    FOREIGN KEY (idPonto) REFERENCES Ponto_Turistico(idPonto)
+        ON UPDATE CASCADE
+        ON DELETE CASCADE,
+	FOREIGN KEY (idTema) REFERENCES Tema(idTema)
+        ON UPDATE CASCADE
+) ENGINE=INNODB;
+
+CREATE TABLE IF NOT EXISTS FeedBacks(
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    Autor VARCHAR(50) NOT NULL,
+    CIDADE VARCHAR(30) NOT NULL,
+    COMUNICADO TEXT NOT NULL,
+    DATA_COMUNICADO DATE,
+    STATUS VARCHAR(20)
+)ENGINE=INNODB;
+
+CREATE TABLE IF NOT EXISTS Auditoria(
+	ID INT AUTO_INCREMENT PRIMARY KEY,
+    NOME_TABELA VARCHAR(50) NOT NULL,
+    DETALHAMENTO TEXT NOT NULL,
+    DATA DATETIME NOT NULL
+)ENGINE=INNODB;
+CREATE TABLE IF NOT EXISTS Auditoria_PHP(
+	ID INT AUTO_INCREMENT PRIMARY KEY,
+    ID_PONTO INT NOT NULL,
+    NOME_TABELA VARCHAR(50) NOT NULL,
+    DETALHAMENTO TEXT NOT NULL,
+    DATA DATETIME NOT NULL
+)ENGINE=INNODB;

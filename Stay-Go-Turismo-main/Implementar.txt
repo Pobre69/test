@@ -1,0 +1,48 @@
+PAGINAS:
+	
+	* [ FEITO ] CONTATO
+	* [ FEITO ] CITACOES - REFERENCIAS
+	* [ ] COMO FUNCIONA
+	* [ FEITO ] QUEM SOMOS
+	* [ ] INDEX
+
+SISTEMAS IMPLEMENTARES:
+
+	[ FEITO ] REPOSITORY
+	[ FEITO ] ADAPTER
+	[ FEITO ] OBSERVER
+	[ ] FACEDE
+	[ FEITO ] DECORATOR
+	[ FEITO ] COMPOSITE
+	[ ] STRATEGY
+	
+
+SISTEMA DE BUSCA (FALTA IMPLEMENTAR NA INTERFACE) :
+- [ FEITO ] RF01 --- O sistema vai possuir uma seção para adicionar cidades que os usuários pedirem, na sessão de feedback. --- Média  <br>
+- [ FEITO ] RF04 --- O sistema deve ter um sistema de busca eficiente por categorias tais como esportes, museus,  pontos naturais e edifícios históricos. --- Alta  <b> --- PRIORIDADE </b><br>
+- [ FEITO ] RF07 --- O sistema de busca deverá ter filtros de horário de abertura, preço, entre outros. --- Baixa<br>
+- [ FEITO ] RF10 --- Serão criadas seções por cidades, quando (e se) o projeto expandir para outras cidades. --- Baixa  <br>
+
+SISTEMA PRA INTERFACE:
+- [ ] RF02 --- O sistema deve ter ferramentas para dar zoom em determinadas seções, como, por exemplo, o pequeno quadro com o ponto turístico. --- Alta <b> --- PRIORIDADE </b><br>
+- [ FEITO ] RF03 --- O usuário deve poder personalizar as configurações da interface como claro e escuro. --- Média<b> --- PRIORIDADE </b><br>
+- [ FEITO ] RF15 --- O sistema vai possuir uma seção de citações de pessoas mais famosas para dar credibilidade ( se, por exemplo, o Gleison indicar o site, terá uma parte escrita “indicado por Gleison, professor do colégio Cotemig…”) --- Alta <b> --- PRIORIDADE </b><br>
+- [ FEITO ] RF16 --- O sistema deve ter uma página de referências, para que a sua credibilidade aumente. --- Alta <b> --- PRIORIDADE </b><br>
+- [ ] RF08 --- Cada ponto turístico terá uma página no sistema, com informações. --- Alta <b> --- PRIORIDADE </b><br>
+
+MOSTRAR INFORMAÇÃO DO BANCO DE DADOS (FALTA IMPLEMENTAR NA INTERFACE):
+- [ FEITO ] RF05 --- O sistema deverá possuir pelo menos, os 10 pontos turísticos mais visitados de Belo Horizonte. Esses pontos terão como base a pesquisa em diversas IAs, onde os pontos que mais se repetirem, serão colocados em destaque. --- Alta <b> --- PRIORIDADE </b><br>
+- [ FEITO ] RF11 --- Serão criados pacotes com percursos, mostrando pontos turísticos próximos entre si e com o mesmo tema. Serão pacotes padrões e todos os usuários terão acesso a eles. --- Média<br>
+- [ FEITO ] RF17 --- O sistema poderá mostrar também, patrimônios históricos importantes, mesmo que eles não sejam pontos turísticos. --- Baixa <br>
+- [ FEITO ] RF18 --- O sistema poderá mostrar pontos turísticos naturais, além dos artificiais. --- Média <b> --- PRIORIDADE </b><br>
+
+BANCO DE DADOS:
+- [ FEITO ] RF06 --- O sistema deve possuir uma seção de Feedback para a equipe de desenvolvimento. --- Média <br>
+- [ FEITO ] RF09 --- Serão criadas seções onde pontos turísticos com o mesmo tema (como, por exemplo, tema futebol: Mineirão, Arena Independência, Arena MRV…) serão catalogados juntos. --- Média<b> --- PRIORIDADE </b><br>
+- [ FEITO ] RF20 --- Na seção de FeedBack, as pessoas poderão dar sugestões de pacotes de percursos. --- Média <br>
+
+IA:
+- [ ] RF12 --- Será implementado, além de pontos turísticos locais para refeição que possuam um certo destaque com o auxílio do Google Maps. --- Baixa <br>
+- [ ] RF13 --- Também será implementado hotéis que possuam um bom destaque com o auxílio do Google Maps. --- Baixa  <br>
+- [ ] RF14 --- O sistema terá pontos turísticos variados, além dos 10 que foram citados acima com o auxílio da API do Google Maps. --- Alta  <b> --- PRIORIDADE </b><br>
+- [ ] RF19 --- O sistema falará a média do tempo de percurso de um local para outro (mas sem ser exata, será algo como: “Do Mineirão ao Mineirinho são 5 minutos a pé EM MÉDIA”) --- Baixa<br>
