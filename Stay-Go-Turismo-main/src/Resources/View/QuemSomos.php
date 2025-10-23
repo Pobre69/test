@@ -28,48 +28,48 @@
                 <img src="../../Web/Imagens/Integrantes/enzo.jpg" class="member-image">
                 <div class="member-info">
                     <h2 class="member-name Color3">Enzo</h2>
-                    <p class="member-role Color6">Desenvolvedor Backend</p>
-                    <p class="member-contribution Color7 BorderColor2">Responsável pela arquitetura e desenvolvimento do backend do projeto, implementando APIs robustas e gerenciamento de banco de dados.</p>
+                    <p class="member-role Color6">Criador do Banco de Dados</p>
+                    <p class="member-contribution Color7 BorderColor2">Responsável pela modelagem, criação e implementação do banco de dados, bem como pela inserção inicial dos dados necessários para o funcionamento do sistema.</p>
                 </div>
             </div>
             <div class="team-member BColor5">
-                <img src="../../Web/Imagens/Integrantes/img.jpg" class="member-image">
+                <img src="../../Web/Imagens/Integrantes/kayque.jpg" class="member-image">
                 <div class="member-info">
                     <h2 class="member-name Color3">Kayque</h2>
-                    <p class="member-role Color6">Desenvolvedor Backend</p>
-                    <p class="member-contribution Color7 BorderColor2">Responsável pela arquitetura e desenvolvimento do backend do projeto, implementando APIs robustas e gerenciamento de banco de dados.</p>
+                    <p class="member-role Color6">Gerente do Banco de Dados</p>
+                    <p class="member-contribution Color7 BorderColor2">Responsável pela administração e controle das informações armazenadas no banco de dados, assegurando a integridade e segurança dos dados, além de disponibilizá-los de forma adequada para a equipe de desenvolvimento back-end.</p>
                 </div>
             </div>
             <div class="team-member BColor5">
-                <img src="../../Web/Imagens/Integrantes/img.jpg" class="member-image">
+                <img src="../../Web/Imagens/Integrantes/davi.jpg" class="member-image">
                 <div class="member-info">
                     <h2 class="member-name Color3">Davi</h2>
-                    <p class="member-role Color6">Desenvolvedor Backend</p>
-                    <p class="member-contribution Color7 BorderColor2">Responsável pela arquitetura e desenvolvimento do backend do projeto, implementando APIs robustas e gerenciamento de banco de dados.</p>
+                    <p class="member-role Color6">Desenvolvedor Front-End</p>
+                    <p class="member-contribution Color7 BorderColor2">Responsável pelo desenvolvimento das páginas da aplicação e pela criação dos respectivos elementos de design e interface com o usuário.</p>
                 </div>
             </div>
             <div class="team-member BColor5">
                 <img src="../../Web/Imagens/Integrantes/lopes.jpg" class="member-image">
                 <div class="member-info">
                     <h2 class="member-name Color3">Arthur Lopes</h2>
-                    <p class="member-role Color6">Desenvolvedor Backend</p>
-                    <p class="member-contribution Color7 BorderColor2">Responsável pela arquitetura e desenvolvimento do backend do projeto, implementando APIs robustas e gerenciamento de banco de dados.</p>
+                    <p class="member-role Color6">Desenvolvedor Back-End</p>
+                    <p class="member-contribution Color7 BorderColor2">Responsável pela implementação da arquitetura baseada no padrão MVC (Model-View-Controller) e pela criação das rotas utilizadas na aplicação.</p>
                 </div>
             </div>
             <div class="team-member BColor5">
                 <img src="../../Web/Imagens/Integrantes/pedroV.jpg" class="member-image">
                 <div class="member-info">
                     <h2 class="member-name Color3">Pedro</h2>
-                    <p class="member-role Color6">Desenvolvedor Backend</p>
-                    <p class="member-contribution Color7 BorderColor2">Responsável pela arquitetura e desenvolvimento do backend do projeto, implementando APIs robustas e gerenciamento de banco de dados.</p>
+                    <p class="member-role Color6">Gerente de Equipe</p>
+                    <p class="member-contribution Color7 BorderColor2">Responsável pela coordenação geral do desenvolvimento do projeto, pela gestão das atividades de cada integrante e pela administração da hospedagem do site e de suas informações.</p>
                 </div>
             </div>
             <div class="team-member BColor5">
                 <img src="../../Web/Imagens/Integrantes/china.jpg" class="member-image">
                 <div class="member-info">
                     <h2 class="member-name Color3">Arthur Victor</h2>
-                    <p class="member-role Color6">Desenvolvedor Backend</p>
-                    <p class="member-contribution Color7 BorderColor2">Responsável pela arquitetura e desenvolvimento do backend do projeto, implementando APIs robustas e gerenciamento de banco de dados.</p>
+                    <p class="member-role Color6">Desenvolvedor Back-End</p>
+                    <p class="member-contribution Color7 BorderColor2">Responsável pela definição e aplicação de design patterns, além do aprimoramento e ajuste da estrutura baseada no padrão MVC.</p>
                 </div>
             </div>
         </section>

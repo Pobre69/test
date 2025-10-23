@@ -2,35 +2,35 @@ PAGINAS:
 	
 	* [ FEITO ] CONTATO
 	* [ FEITO ] CITACOES - REFERENCIAS
-	* [ ] COMO FUNCIONA
+	* [ FEITO ] COMO FUNCIONA
 	* [ FEITO ] QUEM SOMOS
-	* [ ] INDEX
+	* [ FEITO ] INDEX
 
 SISTEMAS IMPLEMENTARES:
 
 	[ FEITO ] REPOSITORY
 	[ FEITO ] ADAPTER
 	[ FEITO ] OBSERVER
-	[ ] FACEDE
+	[ FEITO ] FACEDE
 	[ FEITO ] DECORATOR
 	[ FEITO ] COMPOSITE
-	[ ] STRATEGY
+	[ NÃO TEM POR QUE UTILIZAR ] STRATEGY
 	
 
-SISTEMA DE BUSCA (FALTA IMPLEMENTAR NA INTERFACE) :
+SISTEMA DE BUSCA:
 - [ FEITO ] RF01 --- O sistema vai possuir uma seção para adicionar cidades que os usuários pedirem, na sessão de feedback. --- Média  <br>
 - [ FEITO ] RF04 --- O sistema deve ter um sistema de busca eficiente por categorias tais como esportes, museus,  pontos naturais e edifícios históricos. --- Alta  <b> --- PRIORIDADE </b><br>
 - [ FEITO ] RF07 --- O sistema de busca deverá ter filtros de horário de abertura, preço, entre outros. --- Baixa<br>
 - [ FEITO ] RF10 --- Serão criadas seções por cidades, quando (e se) o projeto expandir para outras cidades. --- Baixa  <br>
 
 SISTEMA PRA INTERFACE:
-- [ ] RF02 --- O sistema deve ter ferramentas para dar zoom em determinadas seções, como, por exemplo, o pequeno quadro com o ponto turístico. --- Alta <b> --- PRIORIDADE </b><br>
+- [ FEITO ] RF02 --- O sistema deve ter ferramentas para dar zoom em determinadas seções, como, por exemplo, o pequeno quadro com o ponto turístico. --- Alta <b> --- PRIORIDADE </b><br>
 - [ FEITO ] RF03 --- O usuário deve poder personalizar as configurações da interface como claro e escuro. --- Média<b> --- PRIORIDADE </b><br>
 - [ FEITO ] RF15 --- O sistema vai possuir uma seção de citações de pessoas mais famosas para dar credibilidade ( se, por exemplo, o Gleison indicar o site, terá uma parte escrita “indicado por Gleison, professor do colégio Cotemig…”) --- Alta <b> --- PRIORIDADE </b><br>
 - [ FEITO ] RF16 --- O sistema deve ter uma página de referências, para que a sua credibilidade aumente. --- Alta <b> --- PRIORIDADE </b><br>
-- [ ] RF08 --- Cada ponto turístico terá uma página no sistema, com informações. --- Alta <b> --- PRIORIDADE </b><br>
+- [ FEITO ] RF08 --- Cada ponto turístico terá uma página no sistema, com informações. --- Alta <b> --- PRIORIDADE </b><br>
 
-MOSTRAR INFORMAÇÃO DO BANCO DE DADOS (FALTA IMPLEMENTAR NA INTERFACE):
+MOSTRAR INFORMAÇÃO DO BANCO DE DADOS:
 - [ FEITO ] RF05 --- O sistema deverá possuir pelo menos, os 10 pontos turísticos mais visitados de Belo Horizonte. Esses pontos terão como base a pesquisa em diversas IAs, onde os pontos que mais se repetirem, serão colocados em destaque. --- Alta <b> --- PRIORIDADE </b><br>
 - [ FEITO ] RF11 --- Serão criados pacotes com percursos, mostrando pontos turísticos próximos entre si e com o mesmo tema. Serão pacotes padrões e todos os usuários terão acesso a eles. --- Média<br>
 - [ FEITO ] RF17 --- O sistema poderá mostrar também, patrimônios históricos importantes, mesmo que eles não sejam pontos turísticos. --- Baixa <br>

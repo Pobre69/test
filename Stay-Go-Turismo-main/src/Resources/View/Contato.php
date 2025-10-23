@@ -24,22 +24,17 @@
         <div class="box contatos">
             <h2>Meus Contatos</h2>
 
-            <a href="mailto:seuemail@gmail.com" target="_blank">
+            <a href="22400311@aluno.cotemig.com.br" target="_blank">
                 <img src="https://img.icons8.com/color/48/gmail-new.png" alt="Gmail" width="24" height="24">
                 Enviar e-mail
             </a>
 
-            <a href="https://wa.me/seunumerodetelefone" target="_blank">
-                <img src="https://img.icons8.com/color/48/whatsapp--v1.png" alt="WhatsApp" width="24" height="24">
-                Fale comigo pelo WhatsApp
-            </a>
-
-            <a href="https://youtube.com/seucanal" target="_blank">
+            <a href="https://youtube.com/@arthurvictor-hp8cv?si=Ol3q14ADBymiBaDS" target="_blank">
                 <img src="https://img.icons8.com/color/48/youtube-play.png" alt="YouTube" width="24" height="24">
                 Visite meu canal no YouTube
             </a>
 
-            <a href="https://instagram.com/seuperfil" target="_blank">
+            <a href="https://www.instagram.com/arthurvictor_gv/" target="_blank">
                 <img src="https://img.icons8.com/color/48/instagram-new--v1.png" alt="Instagram" width="24" height="24">
                 Me siga no Instagram
             </a>

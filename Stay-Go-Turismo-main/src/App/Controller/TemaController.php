@@ -4,7 +4,7 @@ namespace Tema\Controller;
 
 use csrf\token\csrf_Token;
 use DarkMode\Models\DarkMode;
-use App\Buscas\Compositers\TemaSearch;
+use Tema\Compositers\TemaSearch;
 
 class TemaController
 {
