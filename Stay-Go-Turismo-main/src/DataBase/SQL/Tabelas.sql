@@ -1,4 +1,4 @@
-DROP DATABASE IF EXISTS stayGoTurismo;
+#DROP DATABASE IF EXISTS stayGoTurismo;
 CREATE DATABASE IF NOT EXISTS stayGoTurismo;
 USE stayGoTurismo;
 

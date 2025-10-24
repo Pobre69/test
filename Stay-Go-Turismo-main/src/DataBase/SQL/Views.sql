@@ -67,3 +67,6 @@ FROM
         INNER JOIN Show_Ponto_Tema USING(pt_id)
         INNER JOIN Show_PontosTuristicos_Views USING(pt_id)
         INNER JOIN Show_Temas USING(t_id);
+
+CREATE OR REPLACE VIEW Show_Citacoes_Referencias AS
+SELECT * FROM Citacoes_Referencias;

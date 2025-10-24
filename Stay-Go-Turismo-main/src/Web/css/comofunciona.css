@@ -1,0 +1,58 @@
+main {
+    text-align: center;
+}
+
+.explicacao-section {
+    margin: 32px 0;
+    border-radius: 9px;
+    padding: 16px;
+    box-shadow: 0 1px 5px #ddd;
+}
+
+.DisplayDesign {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.DisplayDesign ul li {
+    text-align: left;
+    margin: 6px 0;
+}
+
+.demonstracao {
+    padding: 8px 15px;
+    border-radius: 7px;
+    margin: 6px 0;
+}
+
+.icon {
+    vertical-align: middle;
+    margin-right: 3px;
+}
+
+.quadro-demo {
+    border-radius: 8px;
+    margin: 8px;
+    padding: 10px;
+    width: 205px;
+    vertical-align: top;
+    box-shadow: 0 2px 5px #ddd;
+}
+
+.zoomable.demo {
+    cursor: zoom-in;
+    transition: transform 0.3s;
+}
+
+.zoomable.demo:active {
+    transform: scale(2);
+}
+
+.separador {
+    margin: 24px 0 8px 0;
+    padding-bottom: 4px;
+}
+.quadro-demo {
+    margin: 0 auto;
+}

@@ -14,9 +14,7 @@ class FeedBacksController
     public function create() { }
 
     public function store() 
-    { 
-        csrf_Token::validateToken($_POST['_token'] ?? '');
-
+    {
         $feedBackRepository = new FeedBackRepository();
 
         $comunicado = $_POST['mensagem'] ?? '';
@@ -33,7 +31,7 @@ class FeedBacksController
 
         $feedBackRepository->adicionar($feedBack);
 
-        header('Location: /contato?success=1');
+        header('Location: /Sites/Stay-Go-Turismo-main/src/Routes/Web.php/contato?success=1');
         exit();
     }
 

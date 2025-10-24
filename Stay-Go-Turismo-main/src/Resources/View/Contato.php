@@ -24,9 +24,9 @@
         <div class="box contatos">
             <h2>Meus Contatos</h2>
 
-            <a href="22400311@aluno.cotemig.com.br" target="_blank">
+            <a target="_blank">
                 <img src="https://img.icons8.com/color/48/gmail-new.png" alt="Gmail" width="24" height="24">
-                Enviar e-mail
+                22400311@aluno.cotemig.com.br
             </a>
 
             <a href="https://youtube.com/@arthurvictor-hp8cv?si=Ol3q14ADBymiBaDS" target="_blank">
@@ -42,7 +42,7 @@
 
         <div class="box">
             <h2>Envie seu feedback</h2>
-            <form method="POST" action="<?= $First_ulr ?>/feedBack">
+            <form method="POST" action="<?= $First_url ?>/feedBack">
                 <input type="hidden" name="_token" value="<?= $_SESSION['csrf_token'] ?>">
                 <label for="nome">Nome</label>
                 <input type="text" id="nome" name="nome" required>

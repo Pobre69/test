@@ -8,7 +8,7 @@ class csrf_Token
     {
         session_start();
         if (!isset($_SESSION['csrf_token'])) {
-            $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+            $_SESSION['csrf_token'] = htmlspecialchars_decode(bin2hex(random_bytes(32)));
             return true;
         }
         return false;

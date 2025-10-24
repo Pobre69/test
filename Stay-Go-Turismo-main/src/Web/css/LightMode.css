@@ -109,3 +109,20 @@ form button:hover {
 form button {
     border: none;
 }
+
+.explicacao-section {
+    background: #f9f9fc;
+}
+
+.demonstracao {
+    border: 1px dashed #aaa;
+    background: #fff;
+}
+
+.quadro-demo {
+    background: #f7f7ff;
+}
+
+.separador {
+    border-bottom: 1px solid #e3e3e3;
+}

@@ -6,13 +6,13 @@ require_once __DIR__ . '/INotifyRepository.php';
 require_once __DIR__ . '/../../../DataBase/DB_Global_Conection/DB_Conection.php';
 require_once __DIR__ . '/../../Models/FeedBacks.php';
 
-use INotifyRepository\Interface\INotifyRepository;
+use INotifyRepository\Interface\INotifyRepositoryFeedBack;
 use FeedBacks\Models\FeedBacks;
 use DataBase\DB_Global_Conection\DB_Conection;
 use PontoTuristico\Models\PontoTuristico;
 use PDO;
 
-class FeedBackRepository implements INotifyRepository
+class FeedBackRepository implements INotifyRepositoryFeedBack
 {
     private PDO $conn;
 
@@ -21,15 +21,15 @@ class FeedBackRepository implements INotifyRepository
         $this->conn = DB_Conection::getConnection();
     }
 
-    public function adicionar(PontoTuristico $ponto): bool
+    public function adicionar(FeedBacks $FeedBacks): bool
     {
-        $sql = "CALL Adicionar_FeedBack(:comunicado, :autor, :cidade, @dataCriacao, @status)";
+        $sql = "CALL Adicionar_FeedBack(:comunicado, :autor, :cidade)";
 
         $stmt = $this->conn->prepare($sql);
         $stmt->execute([
-            ':comunicado' => $ponto->comunicado, 
-            ':autor' => $ponto->autor, 
-            ':cidade' => $ponto->cidade
+            ':comunicado' => $FeedBacks->comunicado, 
+            ':autor' => $FeedBacks->autor, 
+            ':cidade' => $FeedBacks->cidade
         ]);
 
         return true;

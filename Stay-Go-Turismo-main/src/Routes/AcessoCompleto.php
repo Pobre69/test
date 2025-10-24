@@ -31,6 +31,7 @@ class Acesso
         require_once __DIR__ . "/../App/Models/DarkMode.php";
         require_once __DIR__ . "/../App/Models/FeedBacks.php";
         require_once __DIR__ . "/../App/Models/Auditoria.php";
+        require_once __DIR__ . "/../App/Models/Citacoes_Referencias.php";
     }
     public static function getAllRepositories()
     {
@@ -42,6 +43,7 @@ class Acesso
         require_once __DIR__ . "/../App/Repository/Notifiers/FeedBackRepository.php";
         require_once __DIR__ . "/../App/Repository/Notifiers/AuditoriaRepository.php";
         require_once __DIR__ . "/../App/Repository/Notifiers/INotifyRepository.php";
+        require_once __DIR__ . "/../App/Repository/CitacaoReferenciaRepository.php";
     }
     public static function getAllFacades()
     {
@@ -54,6 +56,7 @@ class Acesso
         require_once __DIR__ . "/../App/Controller/TemaController.php";
         require_once __DIR__ . "/../App/Controller/ViewController.php";
         require_once __DIR__ . "/../App/Controller/csrf_Token.php";
+        require_once __DIR__ . "/../App/Controller/CitacoesReferenciaController.php";
     }
     public static function getAllObservers()
     {

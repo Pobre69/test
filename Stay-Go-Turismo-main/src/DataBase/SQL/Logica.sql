@@ -129,10 +129,10 @@ END%
 CREATE PROCEDURE Adicionar_View(IN param_idPonto INT,IN param_TotalVisitantes INT)
 BEGIN
     DECLARE var_Verificar INT DEFAULT 0;
-    SELECT COUNT(idPonto) INTO var_Verificar FROM pontoTuristico WHERE idPonto = param_idPonto;
+    SELECT COUNT(idPonto) INTO var_Verificar FROM Ponto_Turistico WHERE idPonto = param_idPonto;
     IF (var_Verificar > 0) THEN
         IF (param_TotalVisitantes > 0) THEN
-            INSERT INTO Ponto_View(id,TotalVisitantes) VALUE (param_idPonto, param_TotalVisitantes);
+            INSERT INTO Ponto_View(idPonto,TotalVisitantes) VALUE (param_idPonto, param_TotalVisitantes);
         ELSE
             SELECT 'Erro ao passar o Total de Visitantes' AS RESULTADO;
         END IF;
@@ -143,13 +143,13 @@ END%
 CREATE PROCEDURE Alterar_View(IN param_idPonto INT,IN param_TotalVisitantes INT,IN param_IsDeleting TINYINT(1))
 BEGIN
     DECLARE var_Verificar INT DEFAULT 0;
-    SELECT COUNT(idPonto) INTO var_Verificar FROM pontoTuristico WHERE idPonto = param_idPonto;
+    SELECT COUNT(idPonto) INTO var_Verificar FROM Ponto_Turistico WHERE idPonto = param_idPonto;
     IF (var_Verificar > 0) THEN
         IF (param_TotalVisitantes > 0) THEN
 			IF (param_IsDeleting = 0) THEN
 				UPDATE Ponto_View 
-				SET id = param_idPonto AND TotalVisitantes = param_TotalVisitantes
-				WHERE id = param_idPonto;
+				SET idPonto = param_idPonto AND TotalVisitantes = param_TotalVisitantes
+				WHERE idPonto = param_idPonto;
             ELSE
 				DELETE FROM Ponto_View WHERE id = param_idPonto;
 			END IF;
@@ -197,7 +197,7 @@ END%
 CREATE PROCEDURE Adicionar_Tema_Ponto(IN param_idTema INT,IN param_idPonto INT,IN param_IsNatural TINYINT(1))
 BEGIN
 	DECLARE VAR_VERIFICAR INT DEFAULT 0;
-    SELECT (SELECT COUNT(idTema) FROM Tema WHERE idTema = param_idTema) * (SELECT COUNT(idPonto) FROM Ponto_Turistico WHERE idPonto = param_Ponto);
+    SELECT (SELECT COUNT(idTema) FROM Tema WHERE idTema = param_idTema) * (SELECT COUNT(idPonto) FROM Ponto_Turistico WHERE idPonto = param_idPonto);
     
     IF (VAR_VERIFICAR > 0) THEN
 		INSERT INTO Tema_Ponto(idTema,idPonto,Ponto_Turistico_Natural) VALUES
@@ -229,12 +229,10 @@ BEGIN
 	END IF;
 END%
 
-CREATE PROCEDURE Adicionar_FeedBack(IN param_Comunicado TEXT,IN param_Autor VARCHAR(50),IN param_Cidade VARCHAR(30),OUT param_Data DATE,OUT param_Status VARCHAR(20))
+CREATE PROCEDURE Adicionar_FeedBack(IN param_Comunicado TEXT,IN param_Autor VARCHAR(50),IN param_Cidade VARCHAR(30))
 BEGIN
     INSERT INTO FeedBacks(ID,AUTOR,COMUNICADO,CIDADE,DATA_COMUNICADO,STATUS) VALUES
         (NULL,param_Autor,param_Comunicado,param_Cidade,CURRENT_TIMESTAMP(),'EM ESPERA');
-    SET param_Data = CURRENT_TIMESTAMP();
-    SET param_Status = 'EM ESPERA';
 END%
 CREATE PROCEDURE Alterar_FeedBack(IN param_ID INT,IN param_Status VARCHAR(20))
 BEGIN

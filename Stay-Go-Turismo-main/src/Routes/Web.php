@@ -7,6 +7,7 @@ use FeedBacks\Controller\FeedBacksController;
 use PontoTuristico\Controller\PontoTuristicoController;
 use Tema\Controller\TemaController;
 use View\Controller\ViewController;
+use CitacoesReferencia\Controller\CitacoesReferenciaController;
 
 Acesso::getAllRoutes();
 
@@ -23,12 +24,17 @@ if (preg_match("#^/darkmode/set#", $_SERVER["REQUEST_URI"])) {
 }
 
 $fullurl = $_SERVER['REQUEST_URI'];
-$url = basename(rtrim($fullurl, '/'));
+$urlBase = basename(rtrim($fullurl, '/'));
+$url = explode('?', $urlBase)[0];
 
 if ($url === 'Web.php' || empty($url) || !isset($url)) { $url = 'index'; }
 
 if ($url === 'index') { ViewController::render('index'); exit; }
-if ($url === 'citacoes') { ViewController::render('Citacoes'); exit; }
+if ($url === 'citacoes') { 
+    $CRC = new CitacoesReferenciaController();
+    $CRC->index(); 
+    exit; 
+}
 if ($url === 'comofunciona') { ViewController::render('ComoFunciona'); exit; }
 if ($url === 'quemsomos') { ViewController::render('QuemSomos'); exit; }
 if ($url === 'contato') { ViewController::render('Contato'); exit; }

@@ -14,7 +14,7 @@ class ViewController
         $csrf->generateToken();
         $DarkMode = new DarkMode();
         $DarkMode = $DarkMode->getMode();
-        $First_ulr = '/Sites/Stay-Go-Turismo-main/src/Routes/Web.php';
+        $First_url = '/Sites/Stay-Go-Turismo-main/src/Routes/Web.php';
         $viewPath = __DIR__ . "/../../Resources/View/" . $viewName . ".php";
         if (file_exists($viewPath)) {
             include_once($viewPath);
