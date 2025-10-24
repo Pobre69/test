@@ -22,32 +22,20 @@ if (preg_match("#^/darkmode/set#", $_SERVER["REQUEST_URI"])) {
     exit;
 }
 
-if ($_SERVER["REQUEST_URI"] === "/" || $_SERVER["REQUEST_URI"] === "/index") {
-    ViewController::render("index");
-    exit;
-}
-if ($_SERVER["REQUEST_URI"] === "/citacoes") {
-    ViewController::render("Citacoes");
-    exit;
-}
-if ($_SERVER["REQUEST_URI"] === "/comofunciona") {
-    ViewController::render("ComoFunciona");
-    exit;
-}
-if ($_SERVER["REQUEST_URI"] === "/quemsomos") {
-    ViewController::render("QuemSomos");
-    exit;
-}
+$fullurl = $_SERVER['REQUEST_URI'];
+$url = basename(rtrim($fullurl, '/'));
 
-if ($_SERVER["REQUEST_URI"] === "/feedback" && $_SERVER["REQUEST_METHOD"] === "GET") {
-    $controller = new FeedBacksController();
-    $controller->create();
-    exit;
-}
+if ($url === 'Web.php' || empty($url) || !isset($url)) { $url = 'index'; }
 
-if ($_SERVER["REQUEST_URI"] === "/feedback" && $_SERVER["REQUEST_METHOD"] === "POST") {
-    $controller = new FeedBacksController();
-    $controller->store();
+if ($url === 'index') { ViewController::render('index'); exit; }
+if ($url === 'citacoes') { ViewController::render('Citacoes'); exit; }
+if ($url === 'comofunciona') { ViewController::render('ComoFunciona'); exit; }
+if ($url === 'quemsomos') { ViewController::render('QuemSomos'); exit; }
+if ($url === 'contato') { ViewController::render('Contato'); exit; }
+if ($url === 'feedBack' && $_SERVER['REQUEST_METHOD'] === 'POST') {
+    $FB_Controller = new FeedBacksController();
+    $FB_Controller->store($_POST);
+    header("Location: /contato");
     exit;
 }
 

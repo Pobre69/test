@@ -2,8 +2,6 @@
 
 namespace Search\Interface;
 
-require_once __DIR__ . "/../Models/PontoTuristico.php";
-
 use PontoTuristico\Models\PontoTuristico;
 
 interface ISearchCompositeService {

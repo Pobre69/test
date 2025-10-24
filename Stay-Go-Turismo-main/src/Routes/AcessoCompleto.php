@@ -6,6 +6,9 @@ class Acesso
 {
     public static function getAllBuscas()
     {
+        require_once __DIR__ . "/../App/Buscas/FinalSearch.php";
+        require_once __DIR__ . "/../App/Buscas/ISearch.php";
+        
         require_once __DIR__ . "/../App/Buscas/Compositers/top10Search.php";
         require_once __DIR__ . "/../App/Buscas/Compositers/PontoSearch.php";
         require_once __DIR__ . "/../App/Buscas/Compositers/TemaSearch.php";
@@ -19,10 +22,6 @@ class Acesso
         require_once __DIR__ . "/../App/Buscas/Decorators/PatrimonioFilter.php";
         require_once __DIR__ . "/../App/Buscas/Decorators/TemaFilter.php";
         require_once __DIR__ . "/../App/Buscas/Decorators/VisitantesFilter.php";
-        require_once __DIR__ . "/../App/Buscas/Decorators/ISearch.php";
-        require_once __DIR__ . "/../App/Buscas/Decorators/AbstractSearch.php";
-
-        require_once __DIR__ . "/../App/Buscas/FinalSearch.php";
     }
     public static function getAllModels()
     {

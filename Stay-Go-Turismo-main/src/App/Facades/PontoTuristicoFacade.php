@@ -12,7 +12,7 @@ use Estado\Decorators\EstadoFilter;
 use Estacionamento\Decorators\EstacionamentoFilter;
 use Horario\Decorators\HorarioFilter;
 use Natural\Decorators\NaturalFilter;
-use Tema\Buscas\Decorators\PatrimonioFilter;
+use TemaFilter\Decorators\TemaFilter;
 use Visitantes\Decorators\VisitantesFilter;
 
 class PontoTuristicoFacade

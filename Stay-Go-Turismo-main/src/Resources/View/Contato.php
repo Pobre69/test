@@ -42,8 +42,8 @@
 
         <div class="box">
             <h2>Envie seu feedback</h2>
-            <form method="POST" action="/feedBack">
-                <input type="hidden" name="_token" value="<?php echo htmlspecialchars($_SESSION['csrf_token']); ?>">
+            <form method="POST" action="<?= $First_ulr ?>/feedBack">
+                <input type="hidden" name="_token" value="<?= $_SESSION['csrf_token'] ?>">
                 <label for="nome">Nome</label>
                 <input type="text" id="nome" name="nome" required>
 

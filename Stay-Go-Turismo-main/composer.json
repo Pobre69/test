@@ -2,7 +2,8 @@
   "autoload": {
     "psr-4": {
       "App\\": "src/App/",
-      "DataBase\\": "src/DataBase/"
+      "DataBase\\": "src/DataBase/",
+      "Search\\": "src/Search/"
     }
   }
 }

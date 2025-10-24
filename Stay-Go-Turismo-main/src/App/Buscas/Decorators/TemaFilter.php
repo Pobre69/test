@@ -1,6 +1,6 @@
 <?php
 
-namespace Tema\Decorator;
+namespace TemaFilter\Decorator;
 
 use Search\Interface\BaseSearchDecorator;
 use Search\Interface\ISearchDecoratorService;
@@ -13,7 +13,7 @@ class TemaFilter extends BaseSearchDecorator {
         $this->tema = $tema;
     }
 
-    public function execute_search(): array {
+    public function execute_search(string $query): array {
         $results = $this->search->execute_search();
         
         $filteredResults = array_filter($results, function($ponto) {

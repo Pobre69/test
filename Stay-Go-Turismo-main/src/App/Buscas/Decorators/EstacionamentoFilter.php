@@ -13,7 +13,7 @@ class EstacionamentoFilter extends BaseSearchDecorator {
         $this->estacionamento = $estacionamento;
     }
 
-    public function execute_search(): array {
+    public function execute_search(string $query): array {
         $results = $this->search->execute_search();
         
         $filteredResults = array_filter($results, function($ponto) {

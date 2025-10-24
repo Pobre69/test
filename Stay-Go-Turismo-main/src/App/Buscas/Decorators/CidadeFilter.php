@@ -2,8 +2,8 @@
 
 namespace Cidades\Decorator;
 
-use ISearch\Interface\ISearchDecoratorService;
-use Abstract\Interface\BaseSearchDecorator;
+use Search\Interface\BaseSearchDecorator;
+use Search\Interface\ISearchDecoratorService;
 
 class CidadeFilter extends BaseSearchDecorator {
     private string $cidadeSelected;
@@ -13,7 +13,7 @@ class CidadeFilter extends BaseSearchDecorator {
         $this->cidadeSelected = $cidadeSelected;
     }
 
-    public function execute_search(): array {
+    public function execute_search(string $query): array {
         $results = $this->search->execute_search();
         
         $filteredResults = array_filter($results, function($ponto) {

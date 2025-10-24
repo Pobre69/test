@@ -18,7 +18,7 @@ class csrf_Token
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $token = $_POST['_token'] ?? '';
-            if (!hash_equals($_SESSION['csrf_token'] ?? '', $token)) {
+            if ($_SESSION['csrf_token'] == $token) {
                 http_response_code(403);
                 echo "CSRF token inválido.";
                 exit;

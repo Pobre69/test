@@ -2,8 +2,8 @@
 
 namespace Avaliacao\Decorator;
 
-use ISearch\Interface\ISearchDecoratorService;
-use Abstract\Interface\BaseSearchDecorator;
+use Search\Interface\BaseSearchDecorator;
+use Search\Interface\ISearchDecoratorService;
 
 class AvaliacaoFilter extends BaseSearchDecorator {
     private float $minRating;

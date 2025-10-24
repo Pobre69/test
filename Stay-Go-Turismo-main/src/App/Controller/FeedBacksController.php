@@ -1,6 +1,6 @@
 <?php
 
-namespace FeedBacks\Controllers;
+namespace FeedBacks\Controller;
 
 use csrf\token\csrf_Token;
 use FeedBacks\Models\FeedBacks;
@@ -11,12 +11,7 @@ class FeedBacksController
 {
     public function index() { }
 
-    public function create() 
-    { 
-        csrf_Token::generateToken();
-        DarkMode::getMode();
-        include_once (__DIR__ . '/../../../Resources/View/contato.php');
-    }
+    public function create() { }
 
     public function store() 
     { 

@@ -1,3 +1,6 @@
+<?php
+    $first_url = '/Sites/Stay-Go-Turismo-main/src/Routes/Web.php';
+?>
 <nav id="Heade" class="BColor3">
     <div id="IconsEdit">
         <div class="MenuIcon" onclick="MenuIconOpening()">
@@ -9,11 +12,11 @@
     </div>
     <div class="RoutesAlign Color2 Text_1-5em">
         <div class="RoutesAlign" id="RoutesAlign">
-            <a class="Text_0-6em" href="/">Home</a>
-            <a class="Text_0-6em" href="/comofunciona">Como Funciona</a>
-            <a class="Text_0-6em" href="/quemsomos">Quem Somos</a>
-            <a class="Text_0-6em" href="/citacoes">Citações</a>
-            <a class="Text_0-6em" href="/feedback">Contato</a>
+            <a class="Text_0-6em" href="<?= $first_url ?>/">Home</a>
+            <a class="Text_0-6em" href="<?= $first_url ?>/comofunciona">Como Funciona</a>
+            <a class="Text_0-6em" href="<?= $first_url ?>/quemsomos">Quem Somos</a>
+            <a class="Text_0-6em" href="<?= $first_url ?>/citacoes">Citações</a>
+            <a class="Text_0-6em" href="<?= $first_url ?>/contato">Contato</a>
         </div>
     </div>
     <div class="menu-toggle" onclick="toggleMenu()">
@@ -21,11 +24,11 @@
     </div>
     <div class="RoutesAlign-box Color2 Text_1-5em" id="mobileMenu">
         <div id="RoutesAlign">
-            <div><a class="Text_1-5em" href="/">Home</a></div>
-            <div><a class="Text_1-5em" href="/comofunciona">Como Funciona</a></div>
-            <div><a class="Text_1-5em" href="/quemsomos">Quem Somos</a></div>
-            <div><a class="Text_1-5em" href="/citacoes">Citações</a></div>
-            <div><a class="Text_1-5em" href="/feedback">Contato</a></div>
+            <div><a class="Text_1-5em" href="<?= $first_url ?>/">Home</a></div>
+            <div><a class="Text_1-5em" href="<?= $first_url ?>/comofunciona">Como Funciona</a></div>
+            <div><a class="Text_1-5em" href="<?= $first_url ?>/quemsomos">Quem Somos</a></div>
+            <div><a class="Text_1-5em" href="<?= $first_url ?>/citacoes">Citações</a></div>
+            <div><a class="Text_1-5em" href="<?= $first_url ?>/contato">Contato</a></div>
         </div>
     </div>
 </nav>
