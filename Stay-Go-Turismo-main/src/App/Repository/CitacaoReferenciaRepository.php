@@ -19,7 +19,15 @@ class CitacoesReferenciaRepository {
 
         $stmt = $this->conn->prepare($sql);
         $stmt->execute();
+        
+        $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $returns = [];
 
-        return $stmt->fetchAll(PDO::FETCH_CLASS, CitacoesReferencia::class);
+        foreach ($results as $result){
+            $Citacao_Referencia = new CitacoesReferencia($result);
+            $returns[] = $Citacao_Referencia;
+        }
+
+        return $returns;
     }
 }

@@ -10,15 +10,12 @@ class CitacoesReferencia{
     public ?string $profissao;
     public string $data;
 
-    public function __construct(array $data = null) {
-        if ($data === null) {
-            return;
-        }
-        $this->id = $data['id'] ?? null;
+    public function __construct(array $data) {
+        $this->id = $data['ID'] ?? null;
         $this->IsCitacao = $data['IsCitacao'];
-        $this->nome = $data['nome'];
-        $this->comentario = $data['comentario'];
-        $this->profissao = $data['profissao'] ?? null;
-        $this->data = $data['data'];
+        $this->nome = $data['NOME'];
+        $this->comentario = $data['COMENTARIO'];
+        $this->profissao = $data['PROFISSAO'] ?? null;
+        $this->data = $data['DATA'];
     }
 }

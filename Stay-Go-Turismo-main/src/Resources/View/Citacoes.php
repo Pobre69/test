@@ -25,17 +25,28 @@
         <section class="citacoes-container">
             <?php if(isset($citacoes) && is_array($citacoes)): ?>
                 <?php foreach ($citacoes as $citacao): ?>
-                    <article class="BColor4 BorderColor layout-artigo">
-                        <p class="Color3 texto-comentario">
-                            “<?= htmlspecialchars($citacao['comentario'] ?? '') ?>”
-                        </p>
-                        <p class="Color3 texto-nome">
-                            <?= htmlspecialchars($citacao['nome'] ?? '') ?>
-                        </p>
-                        <p class="Color3 texto-profissao">
-                            <?= htmlspecialchars($citacao['profissao'] ?? '') ?>
-                        </p>
-                    </article>
+                    <?php if($citacao->IsCitacao == true): ?>
+                        <article class="BColor4 BorderColor layout-artigo">
+                            <p class="Color3 texto-comentario">
+                                “<?= $citacao->comentario ?? '' ?>”
+                            </p>
+                            <p class="Color3 texto-nome">
+                                <?= $citacao->nome ?? '' ?>
+                            </p>
+                            <p class="Color3 texto-profissao">
+                                <?= $citacao->profissao ?? '' ?>
+                            </p>
+                        </article>
+                    <?php else: ?>
+                        <article class="BColor4 BorderColor layout-artigo">
+                            <p class="Color3 texto-comentario">
+                                <a href="<?= $citacao->nome ?? '' ?>"><?= $citacao->nome ?? '' ?></a>
+                            </p>
+                            <p class="Color3 texto-nome">
+                                <?= $citacao->comentario ?? '' ?>
+                            </p>
+                        </article>
+                    <?php endif; ?>
                 <?php endforeach; ?>
             <?php else: ?>
                 <div id="NoContentMessageBox">

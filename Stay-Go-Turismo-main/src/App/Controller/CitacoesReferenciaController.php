@@ -12,7 +12,7 @@ class CitacoesReferenciaController
     public function index() 
     { 
         $repository = new CitacoesReferenciaRepository();
-        $citacoes_referencias = $repository->listarTodos();
+        $citacoes = $repository->listarTodos();
         $DarkMode = new DarkMode();
         $DarkMode = $DarkMode->getMode();
         $First_url = '/Sites/Stay-Go-Turismo-main/src/Routes/Web.php';
