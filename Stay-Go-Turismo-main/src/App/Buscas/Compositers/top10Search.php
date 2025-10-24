@@ -2,14 +2,12 @@
 
 namespace top10\Composite;
 
-require_once __DIR__ . '/../../../DataBase/DB_Global_Conection/DB_Conection.php';
-require_once __DIR__ . '/../ISearch.php';
-
 use DataBase\DB_Global_Conection\DB_Conection;
 use Search\Interface\ISearchCompositeService;
 use PDO;
 
-class top10Search implements ISearchCompositeService {
+class top10Search implements ISearchCompositeService 
+{
     private PDO $conn;
     private array $searchServices = [];
 

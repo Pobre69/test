@@ -2,19 +2,20 @@
 
 namespace PontoTuristico\Controller;
 
-require_once __DIR__ . "/../Facades/PontoTursiticoFacade";
-
 use csrf\token\csrf_Token;
 use DarkMode\Models\DarkMode;
 use PontoTuristico\Facade\PontoTuristicoFacade;
+use PontoTuristico\Repository\PontoTuristicoRepository;
+use top10\Composite\top10Search;
 
 class PontoTuristicoController
 {
-    public function showFilterForm()
+    public function index()
     {
         csrf_Token::generateToken();
         DarkMode::getMode();
-        include_once(__DIR__ . "/../../Resources/Formularios/PT_Decorators.php");
+        $pontos = new top10Search();
+        $pontos::execute_search("");
     }
 
     public function filterPontosTuristico()

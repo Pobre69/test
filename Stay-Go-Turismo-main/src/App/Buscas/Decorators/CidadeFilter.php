@@ -2,10 +2,8 @@
 
 namespace Cidades\Decorator;
 
-require_once __DIR__ . '/../ISearch.php';
-
-use Search\Interface\BaseSearchDecorator;
-use Search\Interface\ISearchDecoratorService;
+use ISearch\Interface\ISearchDecoratorService;
+use Abstract\Interface\BaseSearchDecorator;
 
 class CidadeFilter extends BaseSearchDecorator {
     private string $cidadeSelected;

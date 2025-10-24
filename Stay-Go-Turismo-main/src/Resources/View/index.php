@@ -28,7 +28,6 @@
     ?>
     
     <main>
-        <!-- Sistema de Busca Avançada -->
         <form method="GET" class="section quadro">
             <h3>Encontrar ponto turístico</h3>
             <input type="text" name="nome" placeholder="Nome do ponto">
@@ -52,7 +51,8 @@
             </select>
             <button type="submit">Buscar</button>
         </form>
-        <?php if ($resultadosBusca): ?>
+
+        <?php if (isset($resultadosBusca) && is_array($resultadosBusca)): ?>
         <section class="section">
             <h2>Resultados da Busca:</h2>
             <?php foreach ($resultadosBusca as $ponto): ?>
@@ -66,67 +66,89 @@
             </div>
             <?php endforeach; ?>
         </section>
-        <?php endif;?>
+        <?php else: ?>
+            <p>Nenhum resultado encontrado para sua busca.</p>
+        <?php endif; ?>
         
         <section class="section">
             <h2>1. 10 Maiores Destaques</h2>
-            <?php foreach ($destaques as $ponto): ?>
-            <div class="quadro zoomable" tabindex="0">
-                <a href="ponto.php?id=<?= urlencode($ponto['pt_id']) ?>">
-                    <img src="src/Web/Imagens/<?= htmlspecialchars($ponto['imagem'] ?? 'logoSugestao.jpg') ?>" style="width:100px"><br>
-                    <b><?= htmlspecialchars($ponto['pt_nome']) ?></b>
-                </a><br>
-                Acessos: <?= htmlspecialchars($ponto['pt_views'] ?? '-') ?>
-            </div>
-            <?php endforeach; ?>
+            <?php if (isset($destaques) && is_array($destaques)): ?>
+                <?php foreach ($destaques as $ponto): ?>
+                <div class="quadro zoomable" tabindex="0">
+                    <a href="ponto.php?id=<?= urlencode($ponto['pt_id']) ?>">
+                        <img src="src/Web/Imagens/<?= htmlspecialchars($ponto['imagem'] ?? 'logoSugestao.jpg') ?>" style="width:100px"><br>
+                        <b><?= htmlspecialchars($ponto['pt_nome']) ?></b>
+                    </a><br>
+                    Acessos: <?= htmlspecialchars($ponto['pt_views'] ?? '-') ?>
+                </div>
+                <?php endforeach; ?>
+            <?php else: ?>
+                <p>Nenhum destaque disponível no momento.</p>
+            <?php endif; ?>
         </section>
         
         <section class="section">
             <h2>2. Pontos Mais Visitados</h2>
-            <?php foreach ($pontosMaisVisitados as $ponto): ?>
-            <div class="quadro zoomable" tabindex="0">
-                <a href="ponto.php?id=<?= urlencode($ponto['pt_id']) ?>">
-                    <b><?= htmlspecialchars($ponto['pt_nome']) ?></b>
-                </a><br>
-                Visitantes: <?= htmlspecialchars($ponto['pt_views'] ?? '-') ?>
-            </div>
-            <?php endforeach; ?>
+            <?php if (isset($pontosMaisVisitados) && is_array($pontosMaisVisitados)): ?>
+                <?php foreach ($pontosMaisVisitados as $ponto): ?>
+                <div class="quadro zoomable" tabindex="0">
+                    <a href="ponto.php?id=<?= urlencode($ponto['pt_id']) ?>">
+                        <b><?= htmlspecialchars($ponto['pt_nome']) ?></b>
+                    </a><br>
+                    Visitantes: <?= htmlspecialchars($ponto['pt_views'] ?? '-') ?>
+                </div>
+                <?php endforeach; ?>
+            <?php else: ?>
+                <p>Nenhum ponto visitado recentemente.</p>
+            <?php endif; ?>
         </section>
         
         <section class="section">
             <h2>3. Melhores Avaliados</h2>
-            <?php foreach ($avaliados as $ponto): ?>
-            <div class="quadro zoomable" tabindex="0">
-                <a href="ponto.php?id=<?= urlencode($ponto['pt_id']) ?>">
-                    <b><?= htmlspecialchars($ponto['pt_nome']) ?></b>
-                </a><br>
-                Avaliação: <?= htmlspecialchars($ponto['avaliacaoGeral'] ?? '-') ?>
-            </div>
-            <?php endforeach; ?>
+            <?php if (isset($avaliados) && is_array($avaliados)): ?>
+                <?php foreach ($avaliados as $ponto): ?>
+                <div class="quadro zoomable" tabindex="0">
+                    <a href="ponto.php?id=<?= urlencode($ponto['pt_id']) ?>">
+                        <b><?= htmlspecialchars($ponto['pt_nome']) ?></b>
+                    </a><br>
+                    Avaliação: <?= htmlspecialchars($ponto['avaliacaoGeral'] ?? '-') ?>
+                </div>
+                <?php endforeach; ?>
+            <?php else: ?>
+                <p>Nenhum ponto avaliado disponível.</p>
+            <?php endif; ?>
         </section>
         
         <section class="section">
             <h2>4. Patrimônios Históricos</h2>
-            <?php foreach ($patrimonios as $patrimonio): ?>
-            <div class="quadro zoomable" tabindex="0">
-                <a href="ponto.php?id=<?= urlencode($patrimonio['pt_id']) ?>">
-                    <b><?= htmlspecialchars($patrimonio['pt_nome']) ?></b>
-                </a><br>
-                Tema: <?= htmlspecialchars($patrimonio['tema']) ?>
-            </div>
-            <?php endforeach; ?>
+            <?php if (isset($patrimonios) && is_array($patrimonios)): ?>
+                <?php foreach ($patrimonios as $patrimonio): ?>
+                <div class="quadro zoomable" tabindex="0">
+                    <a href="ponto.php?id=<?= urlencode($patrimonio['pt_id']) ?>">
+                        <b><?= htmlspecialchars($patrimonio['pt_nome']) ?></b>
+                    </a><br>
+                    Tema: <?= htmlspecialchars($patrimonio['tema']) ?>
+                </div>
+                <?php endforeach; ?>
+            <?php else: ?>
+                <p>Nenhum patrimônio histórico cadastrado.</p>
+            <?php endif; ?>
         </section>
         
         <section class="section">
             <h2>5. Pontos Naturais</h2>
-            <?php foreach ($pontosNaturais as $natural): ?>
-            <div class="quadro zoomable" tabindex="0">
-                <a href="ponto.php?id=<?= urlencode($natural['pt_id']) ?>">
-                    <b><?= htmlspecialchars($natural['pt_nome']) ?></b>
-                </a><br>
-                Tema: <?= htmlspecialchars($natural['tema']) ?>
-            </div>
-            <?php endforeach; ?>
+            <?php if (isset($pontosNaturais) && is_array($pontosNaturais)): ?>
+                <?php foreach ($pontosNaturais as $natural): ?>
+                <div class="quadro zoomable" tabindex="0">
+                    <a href="ponto.php?id=<?= urlencode($natural['pt_id']) ?>">
+                        <b><?= htmlspecialchars($natural['pt_nome']) ?></b>
+                    </a><br>
+                    Tema: <?= htmlspecialchars($natural['tema']) ?>
+                </div>
+                <?php endforeach; ?>
+            <?php else: ?>
+                <p>Nenhum ponto natural cadastrado.</p>
+            <?php endif; ?>
         </section>
     </main>
 

@@ -2,6 +2,10 @@
 
 namespace CRUDrepository\Interface;
 
+use PontoTuristico\Models\PontoTuristico;
+use Tema\Models\Tema;
+use Ponto_Tema\Models\Ponto_Tema;
+
 interface IPontoRepository
 {
     public function adicionar(PontoTuristico $ponto): bool;

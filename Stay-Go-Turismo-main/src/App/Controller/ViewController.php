@@ -2,8 +2,6 @@
 
 namespace View\Controller;
 
-require_once __DIR__ . "/../Models/DarkMode.php";
-
 use DarkMode\Models\DarkMode;
 
 class ViewController

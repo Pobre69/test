@@ -9,6 +9,7 @@ require_once __DIR__ . '/../../Models/Auditoria.php';
 use INotifyRepository\Interface\INotifyRepository;
 use Auditoria\Models\Auditoria;
 use DataBase\DB_Global_Conection\DB_Conection;
+use PontoTuristico\Models\PontoTuristico;
 use PDO;
 
 class AuditoriaRepository implements INotifyRepository

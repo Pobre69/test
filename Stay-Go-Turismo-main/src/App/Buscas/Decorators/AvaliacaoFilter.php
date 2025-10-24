@@ -2,10 +2,8 @@
 
 namespace Avaliacao\Decorator;
 
-require_once __DIR__ . '/../ISearch.php';
-
-use Search\Interface\BaseSearchDecorator;
-use Search\Interface\ISearchDecoratorService;
+use ISearch\Interface\ISearchDecoratorService;
+use Abstract\Interface\BaseSearchDecorator;
 
 class AvaliacaoFilter extends BaseSearchDecorator {
     private float $minRating;
@@ -17,7 +15,7 @@ class AvaliacaoFilter extends BaseSearchDecorator {
         $this->maxRating = $maxRating;
     }
 
-    public function execute_search(): array {
+    public function execute_search(string $query): array {
         $results = $this->search->execute_search();
         
         $filteredResults = array_filter($results, function($ponto) {

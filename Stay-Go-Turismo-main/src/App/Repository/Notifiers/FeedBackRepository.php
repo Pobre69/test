@@ -9,6 +9,7 @@ require_once __DIR__ . '/../../Models/FeedBacks.php';
 use INotifyRepository\Interface\INotifyRepository;
 use FeedBacks\Models\FeedBacks;
 use DataBase\DB_Global_Conection\DB_Conection;
+use PontoTuristico\Models\PontoTuristico;
 use PDO;
 
 class FeedBackRepository implements INotifyRepository

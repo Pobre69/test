@@ -2,19 +2,7 @@
 
 namespace PontoTuristico\Facade;
 
-require_once __DIR__ . "/../Repository/PontoTuristicoRepository.php";
-require_once __DIR__ . "/../Buscas/Compositers/PontoSearch.php";
-require_once __DIR__ . "/../Buscas/Compositers/TemaSearch.php";
-require_once __DIR__ . "/../Buscas/Compositers/top10Search.php";
-require_once __DIR__ . "/../Buscas/Decorators/AvaliacaoFilter.php";
-require_once __DIR__ . "/../Buscas/Decorators/CidadeFilter.php";
-require_once __DIR__ . "/../Buscas/Decorators/EstacionamentoFilter.php";
-require_once __DIR__ . "/../Buscas/Decorators/EstadoFilter.php";
-require_once __DIR__ . "/../Buscas/Decorators/HorarioFilter.php";
-require_once __DIR__ . "/../Buscas/Decorators/NaturalFilter.php";
-require_once __DIR__ . "/../Buscas/Decorators/PatrimonioFilter.php";
-require_once __DIR__ . "/../Buscas/Decorators/TemaFilter.php";
-require_once __DIR__ . "/../Buscas/Decorators/VisitantesFilter.php";
+
 
 use PontoTuristico\Repository\PontoTuristicoRepository;
 use Ponto\Compositers\PontoSearch;

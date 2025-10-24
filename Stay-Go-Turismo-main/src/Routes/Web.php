@@ -1,14 +1,14 @@
 <?php
 
-require_once __DIR__ . "/../App/Controller/FeedBacksController.php";
-require_once __DIR__ . "/../App/Controller/PontoTuristicoController.php";
-require_once __DIR__ . "/../App/Controller/TemaController.php";
-require_once __DIR__ . "/../App/Controller/ViewController.php";
+require_once __DIR__ . "/AcessoCompleto.php";
 
+use PastasAcesso\Routes\Acesso;
 use FeedBacks\Controller\FeedBacksController;
 use PontoTuristico\Controller\PontoTuristicoController;
 use Tema\Controller\TemaController;
 use View\Controller\ViewController;
+
+Acesso::getAllRoutes();
 
 if (preg_match("#^/darkmode/set#", $_SERVER["REQUEST_URI"])) {
     require_once __DIR__ . "/../App/Controller/DarkModeController.php";
@@ -40,44 +40,14 @@ if ($_SERVER["REQUEST_URI"] === "/quemsomos") {
 }
 
 if ($_SERVER["REQUEST_URI"] === "/feedback" && $_SERVER["REQUEST_METHOD"] === "GET") {
-    require_once __DIR__ . "/../App/Controller/FeedBacksController.php";
     $controller = new FeedBacksController();
     $controller->create();
     exit;
 }
 
 if ($_SERVER["REQUEST_URI"] === "/feedback" && $_SERVER["REQUEST_METHOD"] === "POST") {
-    require_once __DIR__ . "/../App/Controller/FeedBacksController.php";
     $controller = new FeedBacksController();
     $controller->store();
-    exit;
-}
-
-if ($_SERVER["REQUEST_URI"] === "/pontoTuristico" && $_SERVER["REQUEST_METHOD"] === "GET") {
-    require_once __DIR__ . "/../App/Controller/PontoTuristicoController.php";
-    $controller = new PontoTuristicoController();
-    $controller->showFilterForm();
-    exit;
-}
-
-if ($_SERVER["REQUEST_URI"] === "/pontoTuristico" && $_SERVER["REQUEST_METHOD"] === "POST") {
-    require_once __DIR__ . "/../App/Controller/PontoTuristicoController.php";
-    $controller = new PontoTuristicoController();
-    $controller->filterPontosTuristico();
-    exit;
-}
-
-if ($_SERVER["REQUEST_URI"] === "/tema" && $_SERVER["REQUEST_METHOD"] === "GET") {
-    require_once __DIR__ . "/../App/Controller/TemaController.php";
-    $controller = new TemaController();
-    $controller->showFilterForm();
-    exit;
-}
-
-if ($_SERVER["REQUEST_URI"] === "/tema" && $_SERVER["REQUEST_METHOD"] === "POST") {
-    require_once __DIR__ . "/../App/Controller/TemaController.php";
-    $controller = new TemaController();
-    $controller->filterTemas();
     exit;
 }
 

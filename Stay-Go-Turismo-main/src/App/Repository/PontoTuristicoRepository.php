@@ -2,11 +2,6 @@
 
 namespace PontoTuristico\Repository;
 
-require_once __DIR__ . '/../../DataBase/DB_Global_Conection/DB_Conection.php';
-require_once __DIR__ . '/../Models/PontoTuristico.php';
-require_once __DIR__ . '/ICRUDrepository.php';
-require_once __DIR__ . '/../Observer/PontoTuristicoObserver.php';
-
 use CRUDrepository\Interface\IPontoRepository;
 use PontoTuristico\Models\PontoTuristico;
 use PontoTuristico\Observer\PontoTuristicoObserver;
@@ -32,9 +27,9 @@ class PontoTuristicoRepository implements IPontoRepository{
 
         $stmt = $this->conn->prepare($sql);
 
-        return $stmt->execute($this->mapParams($ponto, 'adicionar'));
-
         PontoTuristicoObserver::created($ponto);
+
+        return $stmt->execute($this->mapParams($ponto, 'adicionar'));
     }
 
     public function alterar(PontoTuristico $ponto): bool {

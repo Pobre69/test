@@ -2,16 +2,12 @@
 
 namespace Ponto_Tema\Repository;
 
-require_once __DIR__ . '/../../DataBase/DB_Global_Conection/DB_Conection.php';
-require_once __DIR__ . '/../Models/Ponto_Tema.php';
-require_once __DIR__ . '/ICRUDrepository.php';
-
 use CRUDrepository\Interface\IPonto_TemaRepository;
 use Ponto_Tema\Models\Ponto_Tema;
 use DataBase\DB_Global_Conection\DB_Conection;
 use PDO;
 
-class Ponto_TemaRepository implements IPonto_TemaRepository{
+class Ponto_TemaRepository{
 
     private PDO $conn;
 

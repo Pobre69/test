@@ -2,8 +2,6 @@
 
 namespace Tema\Decorator;
 
-require_once __DIR__ . '/../ISearch.php';
-
 use Search\Interface\BaseSearchDecorator;
 use Search\Interface\ISearchDecoratorService;
 

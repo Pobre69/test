@@ -1,10 +1,11 @@
 <?php
 
-require_once __DIR__ . "/ICRUDrepository.php";
-
 use CRUDrepository\Interface\IPonto_TemaRepository;
+use Ponto_Tema\Repository\Ponto_TemaRepository;
+use Ponto_Tema\Models\Ponto_Tema;
 
-class Ponto_TemaAdapter implements IPonto_TemaRepository {
+class Ponto_TemaAdapter implements IPonto_TemaRepository 
+{
     private Ponto_TemaRepostory $Ponto_Tema;
 
     public function __construct(Ponto_TemaRepository $Ponto_Tema) {
